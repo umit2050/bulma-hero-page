@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Bulma</title>
+</head>
+<body>
+
+    <!-- Nav -->
+    <nav class="navbar is-light" id="top" role="navigation" aria-label="main navigation">
+        <div class="container is-max-widescreen">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html"><img class="is-48x48 ml-3" src="images/s-logo.png" alt=""></a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="index.html" class="navbar-item">Ana Sayfa</a>
+                    <a href="index.html#kategoriler" class="navbar-item">Kategoriler</a>
+                    <a href="iletisim.html" class="navbar-item">İletişim</a>
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <button class="button js-modal-trigger" data-target="modal-giris">Giriş Yap</button>
+                            <button class="button is-success js-modal-trigger" data-target="modal-uyelik">Üye Ol</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav -->
+
+    <!-- Giriş Yap Modal -->
+    <div class="modal p-3" id="modal-giris">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">
+                    <span class="icon mx-2"><i class="fa-solid fa-user"></i></span>
+                    Kullanıcı Girişi</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="field mt-3">
+                    <label for="" class="label">E-Posta adresiniz</label>
+                    <p class="control has-icons-left has-icons-right">
+                        <input type="email" class="input is-medium" placeholder="E-Posta">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fa fa-check"></i>
+                        </span>
+                    </p>
+                </div>
+                <div class="field">
+                    <label for="" class="label">Parolanız</label>
+                    <p class="control has-icons-left">
+                        <input type="password" class="input is-medium" placeholder="Parola">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                    </p>
+                </div>
+                <div class="field is-grouped is-grouped-right mt-5">
+                    <p class="control">
+                        <div class="p-3 pr-5"><a class="has-text-grey is-size-6">Şifremi unuttum</a></div>
+                        <button class="button is-success is-medium">Giriş Yap</button>
+                    </p>
+                </div>
+            </section>
+            <footer class="modal-card-foot"></footer>
+        </div>
+        <button class="modal-close" aria-label="close">Giriş Yap</button>
+    </div>
+    <!-- Giriş Yap Modal -->
+
+    <!-- Üye Ol Modal -->
+    <div class="modal p-3" id="modal-uyelik">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">
+                    <span class="icon mx-2"><i class="fa-solid fa-user"></i></span>
+                    Yeni Üyelik Kaydı</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="field mt-3">
+                    <label for="" class="label">E-Posta adresiniz</label>
+                    <p class="control has-icons-left has-icons-right">
+                        <input type="email" class="input is-success is-medium" placeholder="E-Posta">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fa fa-check"></i>
+                        </span>
+                    </p>
+                    <p class="help is-success">Bu eposta adresi geçerli</p>
+                </div>
+                <div class="field">
+                    <label for="" class="label">Parolanız</label>
+                    <p class="control has-icons-left">
+                        <input type="password" class="input is-medium" placeholder="Parola">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                    </p>
+                </div>
+                <div class="field">
+                    <label for="" class="label">Parolanız (tekrar)</label>
+                    <p class="control has-icons-left">
+                        <input type="password" class="input is-danger is-medium" placeholder="Parola">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                    </p>
+                    <p class="help is-danger">Parolanız ilk yazdığınızla eşleşmiyor</p>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <a href="#">Kullanım şartlarını</a> okudum ve kabul ediyorum
+                        </label>
+                    </div>
+                </div>
+                <div class="field is-grouped is-grouped-right mt-5">
+                    <p class="control">
+                        <button class="button is-success is-medium">Gönder</button>
+                    </p>
+                </div>
+            </section>
+            <footer class="modal-card-foot"></footer>
+        </div>
+        <button class="modal-close" aria-label="close">Gönder</button>
+    </div>
+    <!-- Üye Ol Modal -->
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb has-background-white p-3 mb-0 is-left is-small" aria-label="breadcrumb">
+        <div class="container is-max-widescreen">
+            <ul>
+                <li><a href="index.html" class="has-text-dark"><span class="icon is-small"><i class="fas fa-home" aria-hidden="true"></i></span> Ana Sayfa</a></li>
+                <li class="is-active"><a href="sayfa1.html" aria-current="page"><span class="icon is-small"><i class="fas fa-person-running" aria-hidden="true"></i></span>Spor</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Breadcrumb -->
+
+    <!-- Section -->
+    <section class="section has-background-info">
+        <div class="container is-max-widescreen">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="title is-size-1 has-text-white">Spor</h1>
+                    <p class="subtitle is-size-5 has-text-white">Düzenli yapılan egzersiz ve spor aktiviteleri daha sağlıklı olmanızı, vücudunuzun formda kalmasını ve zinde hissetmenizi sağlar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section -->
+
+    <!-- Section -->
+    <section class="section mx-2">
+        <div class="container is-max-widescreen">
+            <div class="columns">
+                <div class="column">
+                    <div class="content">
+                        <h1 class="title is-size-4 has-text-grey-dark"><span class="icon pr-2"><i class="fas fa-person-walking has-text-info" aria-hidden="true"></i></span> Yürüme</h1>
+                        <p>Vücudun düzenli olarak hareket etmesi önemlidir. Haftanın birkaç gününde yapılan düzenli yürüme egzersizi vücudunuzun genel kondisyonunu yükseltmenizi sağlayacaktır.</p>
+                    </div>
+                    <div class="content">
+                        <h1 class="title is-size-4 has-text-grey-dark"><span class="icon pr-2"><i class="fas fa-dumbbell has-text-link" aria-hidden="true"></i></span> Fitness</h1>
+                        <p>Fitness, kardiyovasküler egzersizler ve ağırlık antrenmanları olarak iki ana bölümde ele alınabilecek bir egzersiz kategorisidir.</p>
+                    </div>
+                    <div class="content">
+                        <h1 class="title is-size-4 has-text-grey-dark"><span class="icon pr-2"><i class="fas fa-basketball has-text-danger" aria-hidden="true"></i></span> Basketbol</h1>
+                        <p>Basketbol, vücudun çoğu kas grubunu çalıştıran, hem yorucu hem de keyifli bir spordur.</p>
+                    </div>
+                    <div class="content">
+                        <h1 class="title is-size-4 has-text-grey-dark"><span class="icon pr-2"><i class="fas fa-person-running has-text-primary" aria-hidden="true"></i></span> Koşu</h1>
+                        <p>Koşu, her yaşta başlanabilecek ve kalori yakımı yüksek bir egzersiz çeşididir.</p>
+                    </div>
+                </div>
+                <div class="column content has-text-align-center">
+                    <figure class="image">
+                        <img src="images/weights-concept-illustration_114360-7450.webp" alt="" style="width: 100%; height: auto">
+                        <!-- Image Credit: https://www.freepik.com/free-vector/weights-concept-illustration_18953918.htm -->
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section -->  
+
+    <!-- Alıntı -->
+    <section class="section has-background-light">
+        <div class="container is-max-widescreen">
+            <div class="columns content is-vcentered">
+                <div class="column is-2 is-offset-1 is-flex is-justify-content-center">
+                    <figure class="image is-128x128">
+                        <img class="is-rounded" src="images/profil-bas.png" alt="">
+                    </figure>
+                </div>
+                <div class="column is-7">
+                    <p class="has-text-grey-dark is-size-5">
+                        <span class="is-italic">"Yaklaşık 10 yıldır düzenli olarak koşuyorum. Bu sayede kilomu kontrol edebiliyorum ve fiziksel olarak kendimi çok daha zinde ve sağlıklı hissediyorum".</span> 
+                        <span class="has-text-weight-semibold ml-3">Ümit Büyükyıldırım</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Alıntı -->
+
+    <!-- Section -->
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <figure class="image is-16by9">
+                <iframe class="has-ratio" width="560" height="315" src="https://www.youtube.com/embed/ZpcYcKplxE4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </figure>
+        </div>
+    </section>
+    <!-- Section -->    
+
+    <!-- top -->
+    <div class="top has-background-danger pt-1">
+        <span class="icon is-large">
+            <a href="#top" class="has-text-white p-3"><i class="fa-solid fa-2x fa-chevron-up"></i></a>
+        </span>
+    </div>
+    <!-- top -->
+
+    <!-- Footer -->
+    <footer class="footer has-background-grey-lighter">
+        <div class="container is-max-widescreen">
+            <div class="columns">
+                <div class="column content">
+                    <p><strong>Sağlıklı Yaşam ve Spor</strong> sitesi <a href="#top" class="has-text-primary">Bulma</a> altyapısı ile hazırlanmıştır.</p>
+                </div>
+                <div class="column is-2 is-flex is-justify-content-center">
+                    <span class="icon mx-4"><a href="#" class="has-text-dark"><i class="fab fa-2x fa-twitter"></i></a></span>
+                    <span class="icon mx-4"><a href="#" class="has-text-dark"><i class="fab fa-2x fa-instagram"></i></a></span>
+                    <span class="icon mx-4"><a href="#" class="has-text-dark"><i class="fab fa-2x fa-linkedin"></i></a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+    
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Smooth Scroll -->
+    <script src="js/smooth-scroll.js"></script>
+    <!-- Scroll top -->
+    <script src="js/scroll-top.js"></script>    
+    <!-- navbar burger -->
+    <script src="js/navbar-burger.js"></script>
+    <!-- Modal Trigger -->
+    <script src="js/modal-trigger.js"></script>
+    
+</body>
+</html>
